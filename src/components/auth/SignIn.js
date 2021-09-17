@@ -1,9 +1,12 @@
 import { useState } from "react"
 import { useHistory } from "react-router"
+import ContinueWithGoogle from "./ContinueWithGoogle"
+
 
 const SignIn = () => {
   const history = useHistory()
   const [error, setError] = useState()
+
 
 
   const handleSignIn = (e) => {
@@ -36,10 +39,9 @@ const SignIn = () => {
     })
 
   }
-
   return (
     <div className="SignIn">
-      { error && <div>{error}</div>}
+      {error && <div>{error}</div>}
 
       <form onSubmit={handleSignIn} method="post">
         <label>Email:</label>
@@ -48,6 +50,9 @@ const SignIn = () => {
         <input name='pass' type="password" />
         <button className="btn">Sign In</button>
       </form>
+
+      <ContinueWithGoogle />
+
     </div>
   )
 }

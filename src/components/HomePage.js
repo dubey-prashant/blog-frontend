@@ -1,4 +1,4 @@
-import ArticlesList from './articles/ArticlesList.js'
+import ArticlesList from './Articles/ArticlesList.js'
 import useFetch from '../js/useFetch'
 import MetaInfo from './partials/MetaInfo.js'
 import '../js/cover'

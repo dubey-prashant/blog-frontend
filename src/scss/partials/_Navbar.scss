@@ -1,13 +1,14 @@
 header {
-  background: linear-gradient(#222, #000);
+  background: #4f4f4f;
   border-bottom: 0.1px solid #999;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
 
   .Navbar {
     height: 50px;
+    padding: 0 5%;
   }
 
   .brand {
@@ -21,7 +22,8 @@ header {
       line-height: 38px;
       font-size: 38px;
       color: #fff;
-      @include text-gradient(#ffebc1 22%, #685639 24%, #b8a988 26%, #cfc09f 27%, #ffecb3 40%, #ffebc1 78%, false);
+      @include text-gradient(#06f, #08f, #0af, #0cf, #4df, #6df, true);
+      // @include text-gradient(#ffebc1 22%, #685639 24%, #b8a988 26%, #cfc09f 27%, #ffecb3 40%, #ffebc1 78%, false);
       font-family: 'Courier new', monospace, sans-serif;
       font-weight: 900;
 
@@ -63,6 +65,7 @@ header {
 
   .showNav {
     display: block;
+    margin: 0 -10%;
   }
 
   @media screen and (min-width: 720px) {

@@ -1,12 +1,11 @@
-import test from "../../images/dubeytechCover.png"
-function ArticlesList({ articles }) {
+const ArticlesList = ({ articles }) => {
 
   return (
     <div className="ArticlesList">
       {articles.map(article => (
         <div className='article' key={article._id}>
-          <img src={test} alt={article.title} />
-          {/* <img src="https://picsum.photos/400/150" alt={article.title} /> */}
+
+          <img src="http://place-puppy.com/500x300" alt={article.title} />
           <div className="content">
             <h2>
               <a href={`/article/${article._id}`}>{article.title}</a>

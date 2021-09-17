@@ -12,7 +12,7 @@ const FullArticle = () => {
   const history = useHistory()
 
   const dataURL = `/api/articles/${id}`
-  const { data: post, isLoading, error } = useFetch(dataURL)
+  const { data: article, isLoading, error } = useFetch(dataURL)
 
   // Function for delete request start
   function handleDelete() {
@@ -36,23 +36,24 @@ const FullArticle = () => {
     <div className="container">
       {isLoading && <Loader />}
       {!isLoading && <>{error && <div className='errorDiv'>{error}</div>}
-        {post &&
+        {article &&
           <div className="Article">
+            {/* MetaInfo */}
             <MetaInfo
-              title={post.title}
-              keywords={post.keywords}
-              description={post.description}
+              title={article.title}
+              keywords={article.keywords}
+              description={article.description}
             />
             <h2 className="title">
-              {post.title}
+              {article.title}
             </h2>
-            <div dangerouslySetInnerHTML={{ __html: marked(post.content) }} className="postBody activateNav"></div>
+            <div dangerouslySetInnerHTML={{ __html: marked(article.content) }} className="articleBody"></div>
             <br />
             <br />
             <p className="author">
-              Posted by - {post.author}.
+              Author - {article.author}.
             </p>
-            <button><Link to={`/update/${post._id}`}>Update</Link></button>
+            <button><Link to={`/update/${article._id}`}>Update</Link></button>
             <button onClick={handleDelete}>delete</button>
           </div>
         }</>

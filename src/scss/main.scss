@@ -1,5 +1,9 @@
 @import "./_mixins.scss";
-
+$c1: #58A2D7;
+$c2:#0A1016;
+// 2E5672
+//39739D
+//A0D6F3
 $primaryColor: #000;
 $secondarColor: #fff;
 
@@ -17,13 +21,18 @@ html,
 body,
 #root,
 .App {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
   box-sizing: border-box;
   background: $primaryColor;
   color: $secondarColor;
+  background-color: #06f;
+  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 a {
@@ -32,7 +41,6 @@ a {
 }
 
 .container {
-  max-width: 1200px;
   padding: 0 5%;
   margin: 0 auto;
 }
@@ -43,20 +51,6 @@ a {
   margin: 30px auto;
 }
 
-@import "./components/_Navbar.scss";
-@import "./components/_HomePage.scss";
-
-
-// SCROLL-BAR
-::-webkit-scrollbar {
-  background: #000;
-  box-shadow: inset 0 0 2px rgba(255, 255, 255, 1);
-}
-
-::-webkit-scrollbar-thumb {
-  width: 8px;
-  margin: 1px;
-  border-radius: 10px;
-  box-shadow: inset 0 0 4px rgba(255, 255, 255, 1);
-
-}
+@import "./reset";
+@import "./partials/_Navbar.scss";
+@import "./partials/_HomePage.scss";
