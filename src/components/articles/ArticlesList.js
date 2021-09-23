@@ -5,7 +5,7 @@ const ArticlesList = ({ articles }) => {
       {articles.map(article => (
         <div className='article' key={article._id}>
 
-          <img src="http://place-puppy.com/500x300" alt={article.title} />
+          <img src="http://place-puppy.com/500x200" alt={article.title} />
           <div className="content">
             <h2>
               <a href={`/article/${article._id}`}>{article.title}</a>

@@ -1,10 +1,10 @@
 header {
-  background: #4f4f4f;
-  border-bottom: 0.1px solid #999;
+  background-color: #000000;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
+  transition: all 0.5s;
 
   .Navbar {
     height: 50px;
@@ -22,6 +22,7 @@ header {
       line-height: 38px;
       font-size: 38px;
       color: #fff;
+      margin: 0;
       @include text-gradient(#06f, #08f, #0af, #0cf, #4df, #6df, true);
       // @include text-gradient(#ffebc1 22%, #685639 24%, #b8a988 26%, #cfc09f 27%, #ffecb3 40%, #ffebc1 78%, false);
       font-family: 'Courier new', monospace, sans-serif;

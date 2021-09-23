@@ -28,11 +28,8 @@ body {
   box-sizing: border-box;
   background: $primaryColor;
   color: $secondarColor;
-  background-color: #06f;
-  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
 }
 
 a {
@@ -47,8 +44,8 @@ a {
 
 .section-title {
   text-align: center;
-  font-size: 30px;
-  margin: 30px auto;
+  font-size: 50px;
+  margin: 60px auto;
 }
 
 @import "./reset";

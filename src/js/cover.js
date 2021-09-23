@@ -3,15 +3,19 @@ window.onload = function () {
   const cover = document.querySelector('.cover')
   const header = document.querySelector('header')
   if (cover) {
-    const coverObserverOptions = {}
+    header.style.position = 'fixed'
+    const coverObserverOptions = {
+      rootMargin: "-250px 0px 0px 0px"
+    }
     const coverObserver = new IntersectionObserver(
       (entries, coverObserver) => {
         entries.forEach(entry => {
           if (entry?.isIntersecting) {
-            header.style.display = 'none'
+            header.style.opacity = '0'
+            header.style.transform = 'translateY(-100%)'
           } else {
-            header.style.display = 'block'
-            header.style.position = 'fixed'
+            header.style.opacity = '1'
+            header.style.transform = 'translateY(0)'
           }
         })
       }, coverObserverOptions)

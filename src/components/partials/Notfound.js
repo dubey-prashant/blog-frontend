@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-
 const Notfound = () => {
   return (
     <div className="Notfound">
-      Not found
-      <p>
-        <Link to="/">
-          Back to home
+      <h1>
+        NOT FOUND
+        <Link to="/home" >
+          Home
         </Link>
-      </p>
+      </h1>
     </div>
   );
 }

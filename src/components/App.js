@@ -11,15 +11,8 @@ import UpdatePost from './Articles/UpdateArticle'
 // Auth components
 import SignUp from './Auth/SignUp'
 import SignIn from './Auth/SignIn'
-// states
-import { useSelector, useDispatch } from 'react-redux'
-import { logIn } from '../actions'
-
 
 function App() {
-  const isLogged = useSelector(state => state.isLogged)
-  const dispatch = useDispatch()
-
   return (
     <Router>
       <Navbar />
@@ -28,11 +21,11 @@ function App() {
         <Route exact path='/' >
           <HomePage />
         </Route>
+        <Route exact path='/blog' component={HomePage} />
+
+        {/* Articles Routes */}
         <Route exact path='/article/:id' >
-          {isLogged &&
-            <FullArticle />
-          }
-          <button onClick={() => dispatch(logIn('testettrtrt'))} >log in </button>
+          <FullArticle />
         </Route>
         <Route exact path='/create' >
           <CreatePost />
@@ -40,6 +33,8 @@ function App() {
         <Route exact path='/update/:id' >
           <UpdatePost />
         </Route>
+
+        {/* Auth Routes */}
         <Route exact path='/signup'>
           <SignUp />
         </Route>
@@ -48,9 +43,7 @@ function App() {
         </Route>
 
         {/* Notfound must be at last declare all routes above this */}
-        <Route path='*' >
-          <Notfound />
-        </Route>
+        <Route path='*' component={Notfound} />
       </Switch>
       <Footer />
     </Router>

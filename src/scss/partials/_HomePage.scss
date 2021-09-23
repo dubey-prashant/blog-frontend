@@ -17,6 +17,7 @@
 
   .welcome {
     h1 {
+      cursor: pointer;
       font-family: 'Courier Prime', monospace;
       font-size: clamp(40px, 10vw, 70px);
       @include text-gradient(#06f, #08f, #0af, #0cf, #4df, #6df, true);
