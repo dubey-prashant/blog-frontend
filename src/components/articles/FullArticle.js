@@ -34,11 +34,11 @@ const FullArticle = () => {
   // Function for delete request --end
 
   return (
-    <div className="container">
+    <>
       {isLoading && <Loader />}
       {!isLoading && <>{error && <div className='errorDiv'>{error}</div>}
         {article &&
-          <div className="Article">
+          <article className="FullArticle">
             {/* MetaInfo */}
             <MetaInfo
               title={article.title}
@@ -48,18 +48,16 @@ const FullArticle = () => {
             <h2 className="title">
               {article.title}
             </h2>
-            <div dangerouslySetInnerHTML={{ __html: marked(article.content) }} className="articleBody"></div>
-            <br />
-            <br />
-            <p className="author">
-              Author - {article.author}.
-            </p>
+            <p className='cc'>{article.author} | {new Date(article.date).toDateString()}</p>
+            <div dangerouslySetInnerHTML={{ __html: marked(article.content) }} className="articleBody">
+            </div>
+
             <button><Link to={`/update/${article._id}`}>Update</Link></button>
             <button onClick={handleDelete}>delete</button>
-          </div>
+          </article>
         }</>
       }
-    </div>
+    </>
   )
 }
 

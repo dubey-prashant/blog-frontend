@@ -60,6 +60,7 @@ const UpdatePost = () => {
   }
   return (
     <>
+      <h2 className="form-title">Update the Article</h2>
       {loadingData && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {(!loadingData && !error) &&

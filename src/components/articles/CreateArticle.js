@@ -36,6 +36,7 @@ const CreatePost = () => {
   }
   return (
     <>
+      <h2 className="form-title">Compose a new Article</h2>
       <ArticleFormField
         article={article}
         setArticle={setArticle}

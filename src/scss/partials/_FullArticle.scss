@@ -1,5 +1,17 @@
-.Article {
+.FullArticle {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid red;
+
   .title {
     font-size: 30px;
+  }
+
+  .cc {
+    color: #ccc;
+    font-size: 13px;
+    padding: 5px 0 6px;
+    font-family: sans-serif;
   }
 }
