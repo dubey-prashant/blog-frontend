@@ -5,6 +5,14 @@
   }
 }
 
+@mixin primaryFont {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@mixin secondaryFont {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
 //  TEXT GRADIENT : six color + :hover
 @mixin text-gradient ($c1, $c2, $c3, $c4, $c5, $c6, $hover) {
   background: linear-gradient(to bottom, $c1, $c2, $c3, $c4, $c5, $c6);
