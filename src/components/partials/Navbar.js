@@ -11,8 +11,8 @@ const Navbar = () => {
         <div className="nav">
           <a href='/blog'>BLOG</a>
           <a href='/courses'>COURSES</a>
-          <a href='/projects'>PROJECTS</a>
-          <a href='/about'>ABOUT</a>
+          <a href='/sign-in'>SIGN IN</a>
+          <a href='/sign-up'>SIGN UP</a>
         </div>
       </div>
     </header>

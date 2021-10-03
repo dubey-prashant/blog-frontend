@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useHistory } from "react-router"
+import ContinueWithGoogle from "./ContinueWithGoogle"
 
 const SignUp = () => {
   const history = useHistory()
@@ -37,10 +38,10 @@ const SignUp = () => {
 
 
   return (
-    <div className="SignUp">
+    <div className="Auth">
 
-      { error && <div>{error}</div>}
-
+      {error && <div>{error}</div>}
+      <h2>Sign Up</h2>
       <form onSubmit={handleSignUp} method="post">
         <label>Name:</label>
         <input name='name' type="text" />
@@ -49,11 +50,12 @@ const SignUp = () => {
         <label>Password:</label>
         <input name='pass' type="password" />
         <button className="btn">Sign Up</button>
-
-        <div className="google">
-          <button><a href='/auth/google'>Google</a></button>
+        <div className="info">
+          <a href="/sign-in">Already registered? Sign In.</a>
         </div>
       </form>
+
+      <ContinueWithGoogle />
     </div>
   )
 }

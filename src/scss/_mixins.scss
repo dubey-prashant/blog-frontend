@@ -21,6 +21,19 @@
   }
 }
 
+// SECTION TITLE 
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin: 40px auto;
+
+  @include minQ(600px) {
+    font-size: 50px;
+    margin: 60px auto;
+  }
+}
+
+
 // HAM ICON 
 $spanHeight : 5px;
 $gap:4px;

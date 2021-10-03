@@ -50,7 +50,7 @@ const Loader = () => {
             <defs>
               <filter id="shadow3">
                 <feDropShadow dx="0" dy="0" stdDeviation="2"
-                  floodColor="#ffebc1" />
+                  floodColor="#eedab0" />
               </filter>
               <radialGradient id="grad3">
                 <stop offset="0%" stopColor="#8a785b" />

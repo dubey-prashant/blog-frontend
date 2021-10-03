@@ -40,15 +40,19 @@ const SignIn = () => {
 
   }
   return (
-    <div className="SignIn">
+    <div className="Auth">
       {error && <div>{error}</div>}
-
+      <h2>Sign In</h2>
       <form onSubmit={handleSignIn} method="post">
         <label>Email:</label>
         <input name='email' type="email" />
         <label>Password:</label>
         <input name='pass' type="password" />
         <button className="btn">Sign In</button>
+        <div className="info">
+          <a href="/sign-up">Don't have an account? Sign Up.</a>
+        </div>
+
       </form>
 
       <ContinueWithGoogle />

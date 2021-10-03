@@ -1,0 +1,66 @@
+.ArticlesList {
+  .article {
+    background: #ddd;
+    color: #222;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 380px;
+    transition: all 0.3s;
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+        width: 100%;
+      }
+
+      box-shadow: 0 0 8px darken(#eee, 10);
+    }
+
+    img {
+      width: 100%;
+      transition: all 0.5s;
+    }
+
+    .content {
+      padding: 10px;
+
+      h2 {
+        margin: 0;
+        font-size: 26px;
+
+        a {
+          color: #000;
+
+          &:hover {
+            color: #333;
+          }
+        }
+      }
+
+      .cc {
+        color: #444;
+        font-size: 13px;
+        padding: 5px 0 6px;
+        font-family: sans-serif;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 18px;
+        text-align: justify;
+      }
+    }
+  }
+
+  @include minQ(600px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .article {
+      min-width: 380px;
+      margin: 20px;
+    }
+  }
+}

@@ -1,5 +1,14 @@
+@mixin linkGrad {
+  @include text-gradient(#dff 22%, #bcbcbc 24%, #888 26%, #c8c8c8 27%, #ffffff 40%, #ddd 78%, true);
+
+  &:hover {
+    @include text-gradient(#06f, #08f, #0af, #0cf, #4df, #6df, false);
+
+  }
+}
+
 header {
-  background-color: #000000;
+  background: linear-gradient(#212121, #111);
   position: sticky;
   top: 0;
   left: 0;
@@ -23,16 +32,9 @@ header {
       font-size: 38px;
       color: #fff;
       margin: 0;
-      @include text-gradient(#06f, #08f, #0af, #0cf, #4df, #6df, true);
-      // @include text-gradient(#ffebc1 22%, #685639 24%, #b8a988 26%, #cfc09f 27%, #ffecb3 40%, #ffebc1 78%, false);
       font-family: 'Courier new', monospace, sans-serif;
       font-weight: 900;
-
-      &:hover,
-      &:active {
-        color: #0ff;
-        @include text-gradient(#dff 22%, #bebebe 24%, #aaaaaa 26%, #d1d1d1 27%, #ffffff 40%, #ddd 78%, false);
-      }
+      @include linkGrad();
     }
   }
 
@@ -54,12 +56,26 @@ header {
       line-height: 16px;
       letter-spacing: 1px;
       font-weight: 600;
+      position: relative;
+      @include linkGrad();
 
-      &:active,
-      &:hover {
-        color: #0ff;
-        border-bottom: 5px solid #0fd;
-        margin-bottom: -5px;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 5px;
+        bottom: -4px;
+        left: 0;
+        border-radius: 3px;
+        background: linear-gradient(#06f, #08f, #0af, #0cf, #4df, #6df);
+        transform-origin: bottom right;
+        transition: transform 0.5s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
     }
   }

@@ -9,6 +9,7 @@ const ArticleFormField = ({ article, setArticle, handleSubmit, isPosting }) => {
       }
     })
   }
+
   return (
     <>
       <form className="ArticleFormField" onSubmit={handleSubmit} method="post">

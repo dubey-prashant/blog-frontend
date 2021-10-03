@@ -42,60 +42,6 @@
 
 // Cover Section :end
 
-// Top Posts section START
-.ArticlesList {
-  .article {
-    background: #fff;
-    color: #000;
-    margin: 20px auto;
-    border-radius: 10px;
-
-    &:hover {
-      box-shadow: 1px 1px 8px darken(#fff, 10),
-        -1px -1px 8px darken(#fff, 10);
-    }
-
-    img {
-      height: 100px;
-      width: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-
-    .content {
-      padding: 10px;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-
-      a {
-        color: #000;
-
-        &:hover {
-          color: #555;
-        }
-      }
-    }
-
-    .c-subtitle {
-      color: #999;
-      font-size: 14px;
-      font-family: sans-serif;
-    }
-  }
-
-  @include minQ(600px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-
-    .article {
-      margin: 0;
-    }
-  }
-}
-
 @keyframes typing {
   from {
     width: 0

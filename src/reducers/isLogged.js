@@ -1,4 +1,4 @@
-const isLoggedReducer = (state = false, action) => {
+const isAuthenticated = (state = false, action) => {
   if (action.type === 'LOG_IN') {
     localStorage.setItem('loggedIn', action.payload)
     state = true
@@ -6,4 +6,4 @@ const isLoggedReducer = (state = false, action) => {
   return state;
 }
 
-export default isLoggedReducer
+export default isAuthenticated

@@ -5,6 +5,7 @@ import useFetch from "../../js/useFetch"
 import marked from 'marked'
 import MetaInfo from "../partials/MetaInfo"
 import swal from "sweetalert"
+import Swal from 'sweetalert2/src/sweetalert2.js'
 
 const FullArticle = () => {
 
@@ -14,7 +15,7 @@ const FullArticle = () => {
   const dataURL = `/api/articles/${id}`
   const { data: article, isLoading, error } = useFetch(dataURL)
 
-  // Function for delete request start
+  // Function for delete request --start
   function handleDelete() {
     fetch(dataURL, {
       method: "DELETE"
@@ -27,10 +28,10 @@ const FullArticle = () => {
       }
     }).catch(err => {
       console.log(err)
-      swal("Error deleting!!!", `Error: ${err.message}`, "error")
+      Swal("Error deleting!!!", `Error: ${err.message}`, "error")
     })
   }
-  // Function for delete request end
+  // Function for delete request --end
 
   return (
     <div className="container">

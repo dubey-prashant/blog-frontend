@@ -16,7 +16,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-
       <Switch>
         <Route exact path='/' >
           <HomePage />
@@ -35,10 +34,10 @@ function App() {
         </Route>
 
         {/* Auth Routes */}
-        <Route exact path='/signup'>
+        <Route exact path='/sign-up'>
           <SignUp />
         </Route>
-        <Route exact path='/signin'>
+        <Route exact path='/sign-in'>
           <SignIn />
         </Route>
 

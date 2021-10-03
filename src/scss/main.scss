@@ -1,9 +1,8 @@
+// font-family: 'Courier Prime', monospace;
+// font-family: 'Poppins',sans-serif;
+// font-family: 'Source Sans Pro', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600;1,700;1,900&display=swap');
 @import "./_mixins.scss";
-$c1: #58A2D7;
-$c2:#0A1016;
-// 2E5672
-//39739D
-//A0D6F3
 $primaryColor: #000;
 $secondarColor: #fff;
 
@@ -15,6 +14,7 @@ $secondarColor: #fff;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 html,
@@ -28,8 +28,8 @@ body {
   box-sizing: border-box;
   background: $primaryColor;
   color: $secondarColor;
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+  background-color: #222;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -42,12 +42,10 @@ a {
   margin: 0 auto;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 50px;
-  margin: 60px auto;
-}
 
 @import "./reset";
 @import "./partials/_Navbar.scss";
 @import "./partials/_HomePage.scss";
+@import "./partials/_ArticleList";
+@import "./partials/ArticleFormField";
+@import "./partials/Auth";

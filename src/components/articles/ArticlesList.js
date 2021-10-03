@@ -8,11 +8,14 @@ const ArticlesList = ({ articles }) => {
           <img src="http://place-puppy.com/500x200" alt={article.title} />
           <div className="content">
             <h2>
-              <a href={`/article/${article._id}`}>{article.title}</a>
+              {/* <a href={`/article/${article._id}`}>{article.title}</a> */}
+              <a href={`/article/${article._id}`}>
+                How to center a div in css the easy way?
+              </a>
             </h2>
-            <p className='date'>{new Date(article.date).toDateString()} </p>
+            <p className='cc'>{article.author} | {new Date(article.date).toDateString()}</p>
             {/* <p className='summary'>{article.intro}</p> */}
-            <p className='summary'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, accusantium vero qui neque sequi optio atque laborum eveniet perferendis consequatur vel ratione, dolorem modi velit aliquam et ipsa porro? Pariatur. </p>
+            <p className='summary'> Lorem adipisicing elit. Facere, accusantium vero qui neque sequi optio atque laborum eveniet perferendis consequatur vel ratione, dolorem modi velit aliquam et ipsa porro? Pariatur. </p>
           </div>
         </div>
       ))

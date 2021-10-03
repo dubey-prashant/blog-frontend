@@ -2,16 +2,18 @@ import ArticlesList from './Articles/ArticlesList.js'
 import useFetch from '../js/useFetch'
 import MetaInfo from './partials/MetaInfo.js'
 import '../js/cover'
-
+// import Swal from 'sweetalert2'
 
 const Homepage = () => {
+
   const { data: articles, isLoading, error } = useFetch('http://localhost:5000/api/articles')
   return (
     <>
+
       {/*  metaData */}
       <MetaInfo
         title={"Blog"}
-        keywords={"programming, tech,dubeytech"}
+        keywords={"programming,web development, tech,dubeytech"}
         description={"A website where you get all your tech needs fullfilled."}
       />
       {/* Content */}
