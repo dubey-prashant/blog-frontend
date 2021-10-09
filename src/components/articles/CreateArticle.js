@@ -4,7 +4,7 @@ import marked from 'marked'
 import DOMPurify from 'dompurify'
 import ArticleFormField from "./articleFormField"
 
-const CreatePost = () => {
+const CreateArticle = () => {
   // const history = useHistory()
 
   // States 
@@ -62,4 +62,4 @@ const CreatePost = () => {
   }
 }
 
-export default CreatePost
+export default CreateArticle

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router"
 import ArticleFormField from "./articleFormField"
 
-const UpdatePost = () => {
+const UpdateArticle = () => {
   const { id } = useParams()
   const history = useHistory()
   const dataURL = `http://localhost:5000/api/articles/${id}`
@@ -75,4 +75,4 @@ const UpdatePost = () => {
   )
 }
 
-export default UpdatePost
+export default UpdateArticle
