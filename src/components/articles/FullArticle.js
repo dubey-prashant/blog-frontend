@@ -15,7 +15,7 @@ const FullArticle = () => {
   const dataURL = `/api/articles/${id}`
   const { data: article, isLoading, error } = useFetch(dataURL)
 
-  // todo Function for delete request --start
+  // Function for delete request --start
   function handleDelete() {
     fetch(dataURL, {
       method: "DELETE"
