@@ -5,9 +5,9 @@ import Footer from './partials/Footer'
 import Notfound from './partials/Notfound'
 import HomePage from './HomePage'
 // Article components
-import FullArticle from 'Articles/FullArticle.js'
-import CreatePost from './Articles/CreateArticle.js'
-import UpdatePost from './Articles/UpdateArticle.js'
+import FullArticle from 'Articles/FullArticle.js';
+import CreatePost from './Articles/CreateArticle.js';
+import UpdatePost from './Articles/UpdateArticle.js';
 // Auth components
 import SignUp from './Auth/SignUp'
 import SignIn from './Auth/SignIn'
