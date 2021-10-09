@@ -5,7 +5,7 @@ import useFetch from "../../js/useFetch"
 import marked from 'marked'
 import MetaInfo from "../partials/MetaInfo"
 import swal from "sweetalert"
-import Swal from 'sweetalert2/src/sweetalert2.js'
+import Swal from 'sweetalert2'
 
 const FullArticle = () => {
 
