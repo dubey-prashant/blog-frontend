@@ -5,7 +5,7 @@ import Footer from './partials/Footer'
 import Notfound from './partials/Notfound'
 import HomePage from './HomePage'
 // Article components
-import FullArticle from 'Articles/FullArticle';
+import FullArticle from './Articles/FullArticle';
 import CreateArticle from './Articles/CreateArticle'
 import UpdateArticle from './Articles/UpdateArticle'
 // Auth components
