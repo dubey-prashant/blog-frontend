@@ -6,8 +6,8 @@ import Notfound from './partials/Notfound'
 import HomePage from './HomePage'
 // Article components
 import FullArticle from 'Articles/FullArticle';
-import CreatePost from './Articles/CreateArticle';
-import UpdatePost from './Articles/UpdateArticle';
+import CreateArticle from './Articles/CreateArticle'
+import UpdateArticle from './Articles/UpdateArticle'
 // Auth components
 import SignUp from './Auth/SignUp'
 import SignIn from './Auth/SignIn'
@@ -27,10 +27,10 @@ function App() {
           <FullArticle />
         </Route>
         <Route exact path='/create' >
-          <CreatePost />
+          <CreateArticle />
         </Route>
         <Route exact path='/update/:id' >
-          <UpdatePost />
+          <UpdateArticle />
         </Route>
 
         {/* Auth Routes */}
