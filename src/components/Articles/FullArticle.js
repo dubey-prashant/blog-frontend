@@ -4,8 +4,7 @@ import { Link } from "react-router-dom"
 import useFetch from "../../js/useFetch"
 import marked from 'marked'
 import MetaInfo from "../partials/MetaInfo"
-import swal from "sweetalert"
-import Swal from 'sweetalert2'
+import swal from 'sweetalert2'
 
 const FullArticle = () => {
 
@@ -28,7 +27,7 @@ const FullArticle = () => {
       }
     }).catch(err => {
       console.log(err)
-      Swal("Error deleting!!!", `Error: ${err.message}`, "error")
+      swal("Error deleting!!!", `Error: ${err.message}`, "error")
     })
   }
   // Function for delete request --end
