@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router"
 import { Link } from "react-router-dom"
 import useFetch from "../../js/useFetch"
 import marked from 'marked'
-// import MetaInfo from "../partials/MetaInfo"
+import MetaInfo from "../partials/MetaInfo"
 import swal from 'sweetalert2'
 
 const FullArticle = () => {
@@ -39,11 +39,11 @@ const FullArticle = () => {
         {article &&
           <article className="FullArticle">
             {/* MetaInfo */}
-            {/* <MetaInfo
+            <MetaInfo
               title={article.title}
-              keywords={article.keywords}
-              description={article.description}
-            /> */}
+              keywords={article.tags}
+              description={article.intro}
+            />
             <h2 className="title">
               {article.title}
             </h2>

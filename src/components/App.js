@@ -11,7 +11,7 @@ import UpdateArticle from './Articles/UpdateArticle'
 // Auth components
 import SignUp from './Auth/SignUp'
 import SignIn from './Auth/SignIn'
-
+// todo : add redux instead of prop drilling
 function App() {
   return (
     <Router>
